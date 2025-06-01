@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📤 Google Drive Uploader
 
 Ứng dụng web upload file lên Google Drive với giao diện hiện đại và theo dõi tiến trình upload real-time.
@@ -80,3 +81,6 @@ npm start
 - **Enhanced UI**: Giao diện hiện đại với gradient và shadows
 - **File Information**: Hiển thị chi tiết thông tin file trước khi upload
 - **Drag & Drop**: Hỗ trợ kéo thả file để upload
+=======
+# WindFile
+>>>>>>> 51947dd96d6ae0ecdd99eea46ebdec4859d8f6d8
