@@ -945,4 +945,5 @@ fileInput.addEventListener('change', function() {
   result.style.display = 'none';
   stopTimer();
   timer.textContent = '00:00';
-}); 
+});
+  
