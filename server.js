@@ -113,7 +113,9 @@ app.use(session({
 const oauth2Client = new google.auth.OAuth2(
   process.env.CLIENT_ID,
   process.env.CLIENT_SECRET,
-  process.env.REDIRECT_URI
+  process.env.REDIRECT_URI || (process.env.NODE_ENV === 'production' 
+    ? 'https://windfile.onrender.com/auth/callback' 
+    : 'http://localhost:3000/auth/callback')
 );
 
 // Middleware kiểm tra login
@@ -469,4 +471,9 @@ app.delete('/file/:id', ensureAuthenticated, async (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
   console.log(`💾 Cache system initialized`);
+  console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log(`🔄 Redirect URI: ${process.env.REDIRECT_URI || (process.env.NODE_ENV === 'production' 
+    ? 'https://windfile.onrender.com/auth/callback' 
+    : 'http://localhost:3000/auth/callback')}`);
+  console.log(`📁 Folder ID: ${process.env.FOLDER_ID ? 'Set' : 'Not set'}`);
 });
