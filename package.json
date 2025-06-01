@@ -1,0 +1,21 @@
+{
+  "name": "drive-uploader",
+  "version": "1.0.0",
+  "description": "Website upload file Google Drive với đăng nhập Google",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "googleapis": "^118.0.0",
+    "multer": "^1.4.4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
+}
